@@ -1,0 +1,51 @@
+@mixin animation($name,$duration : 1s,$iterations: 1,$blend: linear){
+	$value: $name $duration $iterations $blend;
+	-webkit-animation: $value;
+	animation: $value;
+}
+@mixin keyframes($name){
+	@-webkit-keyframes #{$name}{
+		@content;
+	}
+	@keyframes #{$name}{
+		@content;
+	}
+
+}
+@mixin inset-shadow($x: 0px, $y : 0px, $blur : 6px, $spread : 3px,$color : rgba(0,0,0,.5)){
+	$inset: inset $x $y $blur $spread $color;
+	-moz-box-shadow: $inset;
+	-o-box-shadow: $inset;
+	-webkit-box-shadow: $inset;
+	box-shadow: $inset;
+}
+@mixin drop-shadow($x: 0px, $y : 0px, $blur : 6px, $spread : 3px,$color : rgba(0,0,0,.25)){
+	$shadow: $x $y $blur $spread $color;
+	-moz-box-shadow: $shadow;
+	-o-box-shadow: $shadow;
+	-webkit-box-shadow: $shadow;
+	box-shadow: $shadow;
+}
+@mixin background-linear-gradient($primary,$secondary){
+	background: -webkit-gradient(linear,left top, left bottom,from($primary), to($secondary));
+	background: -webkit-linear-gradient($primary,$secondary);
+	background: -o-linear-gradient($primary,$secondary);
+	background: -moz-linear-gradient($primary,$secondary);
+	background: linear-gradient($primary,$secondary);
+}
+@mixin skew($x,$y){
+	$skew: skew($x,$y);
+	-ms-transform: $skew;
+	 -webkit-transform: $skew;
+    transform: $skew;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+@mixin filter-blur($amount){
+	-ms-filter: blur($amount);
+	-webkit-filter: blur($amount);
+	-moz-filter: blur($amount);
+	-o-filter: blur($amount);
+	filter: blur($amount);
+}

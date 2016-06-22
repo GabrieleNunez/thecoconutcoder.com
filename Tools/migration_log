@@ -1,0 +1,12 @@
+../app/sql/create_projects.sql
+../app/sql/create_projects.sql
+../app/sql/create_resume_frameworks.sql
+../app/sql/create_resume_frameworks.sql
+../app/sql/create_resume_languages.sql
+../app/sql/create_resume_languages.sql
+../app/sql/create_resume_software.sql
+../app/sql/create_resume_software.sql
+../app/sql/insert_projects.sql
+../app/sql/insert_resume_frameworks.sql
+../app/sql/insert_resume_languages.sql
+../app/sql/insert_resume_software.sql

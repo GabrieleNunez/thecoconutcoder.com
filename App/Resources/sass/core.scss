@@ -1,0 +1,35 @@
+/////////////////////////////////////////
+// Core values
+/////////////////////////////////////////
+$headerHeight: 68px;
+$bufferSize: 1200px;
+$primary-color: #29bec3; //coconut coder blue
+$secondary-color: #e7e7e7 !default; // white-lilac
+$fontcolor-primary: #414141;
+$fontcolor-secondary: #d96e34;
+$footerHeight: 50px;
+//////////////////////////////////////////
+$size-level-3: 1920px;  //for anything bigger than a 1920x1080 display
+$size-level-2: 768px; //tablets generally come around or under around this width
+$size-level-1: 640px; //phones generally come around or under this width
+///////////////////////////////////////////
+//Media Queries for each size
+
+@mixin large-desktop(){
+	@media only screen and (min-width:$size-level-3){ @content;}
+}
+@mixin desktop(){
+	@content;
+}
+@mixin tablet(){
+	@media only screen and (max-width:$size-level-2) { @content; }
+}
+@mixin phone(){
+	@media only screen and (max-width:$size-level-1) { @content; }
+}
+@mixin animations(){
+	@content;
+}
+@mixin printing(){
+	@media print{ @content; }
+}

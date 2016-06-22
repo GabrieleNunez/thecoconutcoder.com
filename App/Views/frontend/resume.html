@@ -1,0 +1,93 @@
+<template src="/templates/header.html" bronco />
+<div class="row resume">
+	<div class="medium-12 columns">
+		<div id="pageHead" class="row">
+			<div class="medium-12 columns">
+				<h2>Gabriele Nunez</h2>
+				<h1>Resume</h1>
+			</div>
+		</div>
+		<div class="row contact-info" bronco>
+			<div class="medium-12 columns">
+				<p>Name: $resume.name</p>
+				<p class="hide-printing">Email: <a href='mailto:$resume.email'>$resume.email</a></p>
+				<p class="show-printing">Email: $resume.email</p>
+				<p>Phone: $resume.phone</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="medium-12 columns">
+				<h2>Summary</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="medium-12 columns">
+				<p>
+					Highly driven and self-motivating individual with strong background in computers and 
+					customer service. 
+					I have a solid 5+ years programming across multiple hobbyist projects and another 
+					2 years of Customer Service. Attending school with a strong drive toward a bachelors in
+					Computer Science. If you’re interested in seeing my projects they can be found here: 
+					<a class="hide-printing" href='http://github.com/GabrieleNunez'>http://github.com/GabrieleNunez</a>
+					<span class="show-printing">http://github.com/GabrieleNunez</span>
+				 </p>
+			 </div>
+		 </div>
+		 <div class="row">
+		 	<div class="medium-12 columns">
+		 		<h2>Experience</h2>
+		 	</div>
+		 </div>
+		 <div class="row experience">
+		 	<div class="medium-4 columns">
+		 		<div class="row">
+		 			<div class="medium-12 columns">
+		 				<h3>Languages</h3>
+		 			</div>
+		 		</div>
+		 		<div class="row">
+		 			<div class="medium-12 columns">
+			 			<ul>
+                           <loop key="index" value="language" src="resume.languages" bronco>
+                               <li>$language.name</li>
+                           </loop>
+			 			</ul>
+		 			</div>
+		 		</div>
+		 	</div>
+		 	<div class="medium-4 columns">
+		 		<div class="row">
+		 			<div class="medium-12 columns">
+		 				<h3>Frameworks/Tech</h3>
+		 			</div>
+		 		</div>
+		 		<div class="row">
+		 			<div class="medium-12 columns">
+			 			<ul>
+			 				<loop value="framework" src="resume.frameworks" bronco>
+			 					<li>$framework.name</li>
+			 				</loop>
+			 			</ul>
+		 			</div>
+		 		</div>
+		 	</div>
+		 	<div class="medium-4 columns">
+		 		 <div class="row">
+		 			<div class="medium-12 columns">
+		 				<h3>Software</h3>
+		 			</div>
+		 		</div>
+		 		<div class="row">
+		 			<div class="medium-12 columns">
+			 			<ul>
+			 				<loop value="software" src="resume.softwares" bronco>
+			 					<li>$software.name</li>
+			 				</loop>
+			 			</ul>
+		 			</div>
+		 		</div>
+		 	</div>
+		 </div>
+	</div>
+</div>
+<template src="/templates/footer.html" bronco />

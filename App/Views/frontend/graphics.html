@@ -1,0 +1,26 @@
+<template src="/templates/header.html" bronco />
+<div class="row">
+    <div class="medium-12 columns">
+        <div id="pageHead" class="row">
+            <div class="medium-12 columns">
+                <h2>Gabriele Nunez</h2>
+                <h1>Graphics</h1>
+            </div>
+        </div>
+        <div class="row">
+            <expression value="lqImages">
+                <true>
+                    <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+                        <loop key="index" value="image" src="lqImages" bronco>
+                            <li><img class="gallery-image" src="$image" title="Gallery Image $index" alt="Gallery Image"/></li>
+                        </loop>
+                    </ul>
+                </true>
+                <false>
+                    <p style="display:black;text-align:center">Coming Soon!</p>
+                </false>
+            </expression>
+        </div>
+    </div>
+</div>
+<template src="/templates/footer.html" bronco />
