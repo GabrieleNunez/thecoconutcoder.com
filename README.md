@@ -31,5 +31,5 @@ Foundation 5 is utilized on this website, helping to create a stellar responsive
 
 
 ### JQuery
-THe latest jquery 2.x is utilized as well. 
+The latest jquery 2.x is utilized as well. 
 
